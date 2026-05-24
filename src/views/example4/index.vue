@@ -35,7 +35,7 @@ export default {
     async getBackupRecord() {
       this.isLoading = true;
       try {
-        const res = await this.$store.dispatch('example/getBackupRecord', {}, { fromCache: true });
+        const res = await this.$store.dispatch('example/getBackupRecord', {}, {});
         this.recordData = res.data || [];
       } finally {
         this.isLoading = false;
